@@ -1,4 +1,5 @@
 from flask import Flask, jsonify
+from waitress import serve
 
 # Clases de los animales
 class AnimalExotico:
@@ -74,4 +75,4 @@ def home():
 
 # Ejecutar el servidor
 if __name__ == '__main__':
-    app.run(debug=True)
+    serve(app, host='0.0.0.0', port=8080)
